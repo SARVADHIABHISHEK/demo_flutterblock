@@ -7,7 +7,6 @@ class ApiProvider {
  static CoronaDataModel _coronaDataModel = CoronaDataModel();
   static const String _url = 'https://api.covid19api.com/summary';
 
-
   static final _client = http.Client();
 
   static Future<CoronaDataModel> fetchData() async {
@@ -18,8 +17,8 @@ class ApiProvider {
         if (jsonData != null) {
           _coronaDataModel = CoronaDataModel.fromJson(jsonData);
         }
-        return _coronaDataModel;
       } else {
+        return _coronaDataModel;
         throw Exception('Something Went Wrong Bro');
       }
     } on SocketException catch (e) {

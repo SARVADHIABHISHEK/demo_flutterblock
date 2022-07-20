@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../custom_pain.dart';
 import 'homepage.dart';
 
 class MyApp extends StatelessWidget {
@@ -7,7 +8,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const  MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Homepage(),
+      home: DemoCustomPaint(),
     );
   }
 }
